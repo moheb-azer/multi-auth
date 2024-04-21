@@ -21,9 +21,8 @@ return Application::configure(basePath: dirname(__DIR__))
             'auth' => Authenticate::class,
             'isAdmin' => App\Http\Middleware\isAdminMiddleware::class,
             'isUser' => App\Http\Middleware\isUserMiddleware::class,
+            'preventBackHostory' => App\Http\Middleware\PreventBackHostoryMiddleware::class,
         ]);
-
-
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
